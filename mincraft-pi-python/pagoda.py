@@ -44,10 +44,21 @@ def stairs():
 def bridge():
 	mc.setBlocks(x+4,y-9,z+1,x+10,y-9,z-1,7)
 def door():
-	mc .setBlocks(x+4,y-24,z-1,x+4,y-22,z+1,1)
+	#bottom door
+	mc .setBlocks(x+4,y-24,z-2,x+4,y-21,z+2,18)
+	mc .setBlocks(x+4,y-24,z-1,x+4,y-22,z+1,0)
+	#upper door
+	mc .setBlocks(x+2,y-6,z-1,x+2,y-8,z+1,0)
+def pillarreplace():
+	i=0
+	while(i<25):
+		if(0==mc.getBlock(x,y-i,z)):
+			mc.setBlock(x,y-i,z,89)
+		i+=1
 def main():
 	structure()
 	stairs()
-	#bridge()
+	bridge()
 	door()
+	pillarreplace()
 main()	
