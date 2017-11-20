@@ -1,4 +1,4 @@
-def getmovedir(mc):
+def getMoveDir(mc):
 	"""
 	* make sure to put in mc as the mc = Minecraft.create thing
 	* only does x and  z coords

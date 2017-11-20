@@ -1,5 +1,5 @@
 from initme import init
-from direction import getmovedir
+from direction import getMoveDir
 mc = init()
-x,y,z = getmovedir(mc)
+x,y,z = getMoveDir(mc)
 mc.setBlock(x,y,z,1)
