@@ -28,7 +28,8 @@ def spin():
 			blockx.append(x)
 			blocky.append(y)
 			blockz.append(z)
-			blockids.append(mc.getBlock(x,y,z))
+			if(mc.getBlock(x,y,z) != 89):
+				blockids.append(mc.getBlock(x,y,z))
 			#actually placing a block
 			mc.setBlock(x,y,z,89)
 			
