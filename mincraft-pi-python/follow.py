@@ -15,8 +15,8 @@ def spin():
 	while(True):
 		x,y,z = mc.player.getPos()
 		now =time.time()
-		if(now>lasttime+0.2):
-			if(len(blockids)>12):
+		if(now>lasttime+3):
+			if(len(blockids)>5):
 				#delete last block
 				mc.setBlock(blockx[0],blocky[0],blockz[0],blockids[0])
 				#delete oldest array entry
@@ -30,6 +30,8 @@ def spin():
 			blockz.append(z)
 			if(mc.getBlock(x,y,z) != 89):
 				blockids.append(mc.getBlock(x,y,z))
+			else:
+				blockids.append(0)
 			#actually placing a block
 			mc.setBlock(x,y,z,89)
 			
