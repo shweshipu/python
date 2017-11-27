@@ -15,8 +15,8 @@ def spin():
 	while(True):
 		x,y,z = mc.player.getPos()
 		now =time.time()
-		if(now>lasttime+3):
-			if(len(blockids)>5):
+		if(now>lasttime+0.2):
+			if(len(blockids)>16):
 				#delete last block
 				mc.setBlock(blockx[0],blocky[0],blockz[0],blockids[0])
 				#delete oldest array entry
